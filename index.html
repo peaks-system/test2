@@ -70,18 +70,17 @@
         const params = (new URL(document.location)).searchParams;
         const key = params.get('key');
 
-        $(function () {
+         $(function () {
             $('form').submit(function () {
-                const birthday = $('input[name="birthday"]').val();
-                const name = $('input[name="name"]').val();
-                const work  = $('input[name="work"]').val();
-                const times1  = $('input[name="name="times1"]').val();
-                const times2  = $('input[name="name="times2"]').val();
-                const bikou = $('input[name="bikou"]').val();
-                const msg = `${birthday}\n${name}\n${work}\n${times1}\n${times2}\n${bikou}`;
+                const name    = $('input[name="name"]').val();
+                const bangou = $('input[name="bangou"]').val();
+                const shushoujou  = $('input[name="shushoujou"]').val();
+                const keika  = $('input[name="keika"]').val();
+                const hatunetu = $('input[name="hatunetu"]').val();
+                const msg = `${name}\n${bangou}\n${shushoujou}\n${keika}\n${hatunetu}`;
                 sendText(msg);
                 return false;
-            });
+                      });
         });
     </script>
 </body>
