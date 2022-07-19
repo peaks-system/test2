@@ -22,14 +22,14 @@
         <input class="form-control w-50 mt-1" name="work" required>
         </div>
         <p class="mt-3">開始時刻</p>
-        <input type="time" name="times">
+        <input type="time" name="times1">
 
         <p class="mt-3">終了時刻</p>
-        <input type="time" name="times">
+        <input type="time" name="times2">
         
         <p class="mt-3">備考欄</p>
         <div>
-            <input class="form-control w-50 mt-1" name="hatunetu" required>
+            <input class="form-control w-50 mt-1" name="bikou">
         </div>
         <input type="submit" class="mt-4 btn-primary btn-lg" value="送信">
     </form>
@@ -73,11 +73,12 @@
         $(function () {
             $('form').submit(function () {
                 const name    = $('input[name="birthday"]').val();
-                const bangou = $('input[name="bangou"]').val();
-                const shushoujou  = $('input[name="shushoujou"]').val();
-                const keika  = $('input[name="keika"]').val();
-                const hatunetu = $('input[name="hatunetu"]').val();
-                const msg = `${name}\n${bangou}\n${shushoujou}\n${keika}\n${hatunetu}`;
+                const bangou = $('input[name="name"]').val();
+                const shushoujou  = $('input[name="work"]').val();
+                const keika  = $('input[name="name="times1"]').val();
+                const keika  = $('input[name="name="times2"]').val();
+                const hatunetu = $('input[name="bikou"]').val();
+                const msg = `${birthday}\n${name}\n${work}\n${times1}\n${times2}\n${bikou}`;
                 sendText(msg);
                 return false;
             });
