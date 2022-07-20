@@ -73,13 +73,13 @@
 
         $(function () {
             $('form').submit(function () {
-                const time    = $('input[name="time"]').val();
+                const time    = $('input[name="date"]').val();
                 const name    = $('input[name="name"]').val();
                 const bangou = $('input[name="bangou"]').val();
                 const shushoujou  = $('input[name="shushoujou"]').val();
                 const keika  = $('input[name="keika"]').val();
                 const hatunetu = $('input[name="hatunetu"]').val();
-                const msg = `${time}\n${name}\n${bangou}\n${shushoujou}\n${keika}\n${hatunetu}`;
+                const msg = `${date}\n${name}\n${bangou}\n${shushoujou}\n${keika}\n${hatunetu}`;
                 sendText(msg);
                 return false;
             });
