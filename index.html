@@ -15,21 +15,21 @@
         
         <p class="mt-3">名前(全角)</p>
         <div>
-            <input class="form-control w-50 mt-1" name="bangou" required>
+            <input class="form-control w-50 mt-1" name="name" required>
         </div>
         <p class="mt-3">稼働内容</p>
         <div>
-        <input class="form-control w-50 mt-1" name="shushoujou" required>
+        <input class="form-control w-50 mt-1" name="kadou" required>
         </div>
         <p class="mt-3">開始時刻</p>
-        <input type="time" name="example">
+        <input type="time" name="time1">
 
         <p class="mt-3">終了時刻</p>
-        <input type="time" name="example">
+        <input type="time" name="time2">
         
         <p class="mt-3">備考欄</p>
         <div>
-            <input class="form-control w-50 mt-1" name="hatunetu" required>
+            <input class="form-control w-50 mt-1" name="bikou" required>
         </div>
         <input type="submit" class="mt-4 btn-primary btn-lg" value="送信">
     </form>
@@ -74,11 +74,11 @@
             $('form').submit(function () {
                 const date    = $('input[name="date"]').val();
                 const name    = $('input[name="name"]').val();
-                const bangou = $('input[name="bangou"]').val();
-                const time  = $('input[name="time"]').val();
-                const keika  = $('input[name="keika"]').val();
-                const hatunetu = $('input[name="hatunetu"]').val();
-                const msg = `${date}\n${name}\n${bangou}\n${time}\n${keika}\n${hatunetu}`;
+                const kadou = $('input[name="kadou"]').val();
+                const time1  = $('input[name="time1"]').val();
+                const time2  = $('input[name="time2"]').val();
+                const bikou = $('input[name="bikou"]').val();
+                const msg = `${date}\n${name}\n${kadou}\n${time1}\n${time2}\n${bikou}`;
                 sendText(msg);
                 return false;
             });
