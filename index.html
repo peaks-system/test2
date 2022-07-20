@@ -11,30 +11,26 @@
 
     <form class="w-75 mx-auto">
         <p class="mt-3">日付</p>
-        <div>
             <input type="date" name="date">
-        </div>
-        <p class="mt-3">氏名(全角ひらがな)</p>
+        <p class="mt-3">名前(全角)</p>
         <div>
-            <input class="form-control w-100 mt-1" name="name" placeholder="" required>
+            <input class="form-control w-50 mt-1" name="bangou" required>
         </div>
-        <p class="mt-3">診察券番号(半角数字 不明の場合は"0")</p>
+        <p class="mt-3">稼働内容</p>
         <div>
-            <input class="form-control w-100 mt-1" name="bangou" required>
+        <input class="form-control w-50 mt-1" name="shushoujou" required>
         </div>
-        <p class="mt-3">一番お困りのことは?</p>
+        <p class="mt-3">開始時刻</p>
+        <input type="time" name="example">
+
+        <p class="mt-3">終了時刻</p>
+        <input type="time" name="example">
+        
+        <p class="mt-3">備考欄</p>
         <div>
-            <input class="form-control w-100 mt-1" name="shushoujou" required>
+            <input class="form-control w-50 mt-1" name="hatunetu" required>
         </div>
-        <p class="mt-3">いつからどのような様子ですか?</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="keika" required>
-        </div>
-        <p class="mt-3">37.5度以上の発熱の有無("はい" か "いいえ")</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="hatunetu" required>
-        </div>
-        <input type="submit" class="mt-4 btn btn-primary" value="送信">
+        <input type="submit" class="mt-4 btn-primary btn-lg" value="送信">
     </form>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
